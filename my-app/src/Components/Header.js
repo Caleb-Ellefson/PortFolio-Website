@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import anime from 'animejs/lib/anime.es.js'
 import { hexCode } from './colors.js'
 
@@ -11,11 +11,13 @@ export default function Header () {
   })
 
 
-  const getGridSize = useCallback(() => {
+  const getGridSize = () => {
 
     // Calc the amount of rows and columns
     const columns = Math.floor(document.documentElement.clientWidth / 50)
     const rows = Math.floor(document.documentElement.clientHeight / 50)
+
+    console.log(columns, rows)
 
     // Set state for the grid
     setState(prevState => ({
@@ -26,38 +28,34 @@ export default function Header () {
 
     }))
 
+    //Pass the # of rows and columns into css
     document.body.style.setProperty('--rows', state.rows)
     document.body.style.setProperty('--columns', state.columns)
 
-    console.log("Resized")
     console.log(state)
+
     // Set anime properties to the grid
-  
-  
   anime({
     targets: ".tile",
     duration: 0,
     easing: "linear"
   })
-}, [state])
+}
 
-  useEffect(() => {
-      // The callback function passed to useEffect will be called every time the component is rendered
-      //wrap the event listener in a function that only adds the event listener once
-      const handleResize = () => getGridSize()
-      window.addEventListener('resize', handleResize)
-      
-      // The return function will be called when the component is unmounted
-      //remove the event listener to prevent memory leaks
-      return () => window.removeEventListener('resize', handleResize)
-  }, [getGridSize])
+useEffect(() => {
+  getGridSize()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [])
+
+
+
+window.onresize = getGridSize
   
 
 
   const randomColor = () => {
     // Generate a random index from the hexCode array
     const randomIndex = Math.floor(Math.random() * hexCode.length);
-
     // Get the hex property from the object at the random index
     const color = hexCode[randomIndex].code.hex;
 
