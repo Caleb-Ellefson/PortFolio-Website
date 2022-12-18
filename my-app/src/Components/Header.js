@@ -43,7 +43,21 @@ export default function Header () {
 }
 
 useEffect(() => {
-  getGridSize()
+  const columns = Math.floor(document.documentElement.clientWidth / 50)
+  const rows = Math.floor(document.documentElement.clientHeight / 50)
+
+  setState(prevState => ({
+    ...prevState,
+    rows: rows,
+    columns: columns,
+    total: rows * columns
+
+  }))
+
+  //Pass the # of rows and columns into css
+  document.body.style.setProperty('--rows', rows)
+  document.body.style.setProperty('--columns', columns)
+  console.log(rows, columns)
   // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [])
 
