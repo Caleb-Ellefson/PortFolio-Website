@@ -1,3 +1,7 @@
+*{
+  margin:0px;
+}
+
 .body {
   background: black;
   margin: 0;
@@ -31,18 +35,11 @@ to {
 }
 }
 
-body {
-  animation: background-pan 10s linear infinite;
-  background: linear-gradient(
-  to right,
-  var(--g1),
-  var(--g2),
-  var(--g1)
-  );
-  background-size: 200%;
+.body {
   height: 100vh;
   overflow: hidden;
   margin: 0px;
+  padding:0px;
 }
 
 
@@ -60,16 +57,19 @@ body {
 
 .tile {
   cursor: pointer;
-  position: relative;
+  transition: all .2s ease-in-out;
+  transition: box-shadow .5s;
+  transition: 0.5s background-color;
+  cursor: none; 
+
 }
 
-.tile:hover:before {
-  background-color: rgb(30, 30, 30);
+.tile:hover {
+  transform: scale(1.50); 
+  box-shadow: 0 0 11px rgba(22,22,22,.5); 
+  transition-duration: 1s;
+
+
 }
 
-.tile:before {
-  background-color: rgb(15, 15, 15);
-  content: "";
-  inset: 0.5px;
-  position: absolute;
-}
+

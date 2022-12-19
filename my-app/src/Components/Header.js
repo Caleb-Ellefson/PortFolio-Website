@@ -42,9 +42,9 @@ export default function Header () {
   })
 }
 
-useEffect(() => {
-  const columns = Math.floor(document.documentElement.clientWidth / 50)
-  const rows = Math.floor(document.documentElement.clientHeight / 50)
+  useEffect(() => {
+    const columns = Math.floor(document.documentElement.clientWidth / 50)
+    const rows = Math.floor(document.documentElement.clientHeight / 50)
 
   setState(prevState => ({
     ...prevState,
@@ -61,9 +61,7 @@ useEffect(() => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [])
 
-
-
-window.onresize = getGridSize
+  window.onresize = getGridSize
   
 
 
@@ -80,17 +78,12 @@ window.onresize = getGridSize
   const handleStagger = (i) => {
     //Find the id of tile clicked
     const el = i.target.id;
-    console.log(el)
-    setState(prevState => ({
-      ...prevState
-    }))
 
-    console.log("Clicked!")
     
     anime({
       targets: '.tile', 
       backgroundColor: randomColor(),
-      delay: anime.stagger(25,{ grid: [state.columns, state.rows],
+      delay: anime.stagger(50,{ grid: [state.columns, state.rows],
       from: el})
     })
   }
@@ -104,6 +97,7 @@ window.onresize = getGridSize
         key={i}
         id={i}
         onClick={(i) => handleStagger(i)}
+
       />
           ))}
     </div>
