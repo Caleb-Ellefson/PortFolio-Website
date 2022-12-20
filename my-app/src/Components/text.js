@@ -3,14 +3,14 @@ import React from "react";
 export default function Text () {
     return (
         <div>
-            <h1 className='title'> Welcome. </h1>
-            <p className="about">
-            Hello, I'm Caleb Ellefson, a full stack developer skilled in creating full stack applications with proficiency in both front-end and back-end development.
-             I continuously strive to improve my skills and stay up-to-date with the latest technologies.
-             I'm dedicated to delivering high-quality full stack applications to my clients.
-             Thank you for visiting my website. 
-             I hope you find the information here useful.
-            </p>
+            <div className="title">
+                <h1 className='title-header'> Welcome. </h1>
+                <p className="title-about">
+                Hello, I'm Caleb Ellefson, a full stack developer skilled in creating full stack applications with proficiency in both front-end and back-end development.
+                I continuously strive to improve my skills and stay up-to-date with the latest technologies.
+                I'm dedicated to delivering high-quality full stack applications to my clients.
+                </p>
+            </div>
 
             <h4 className="projects"> Projects </h4>
             <ul className="projects-links">

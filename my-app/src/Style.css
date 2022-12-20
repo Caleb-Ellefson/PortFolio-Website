@@ -93,62 +93,79 @@
 
 /* TEXT */
 
-.title {
+
+
+.title-header {
   font-family: 'Bebas Neue', cursive;
   font-size: 90px;
   letter-spacing: 5px;
 
-
+  padding: 25px;
+  background-color:  #e4d9c7 ;
   position: relative;
   z-index: 10000;
   position: absolute;
-  margin-left: 300px;
+  margin-left: 200px;
   margin-top: 350px;
   cursor: none; 
+  border-radius: 5px;
+  width: 700px;
+  box-shadow: 20px 0px 30px #222222;
 
 }
 
-.about{
+.title-about{
   font-family: 'PT Serif', serif;
   font-size: 18px;
   letter-spacing: 1px;
+
+  box-shadow: 20px 25px 20px #222222;
+  border-radius: 5px;
   cursor: none; 
-
-
-
+  background-color:  #e4d9c7 ;
+  padding: 25px;
   width: 700px;
-  z-index: 1000;
+  z-index: 99999;
   position: absolute;
-  margin-left: 300px;
-  margin-top: 460px;
+  margin-left: 200px;
+  margin-top: 475px;
 }
 
 
 .projects{
   font-family: 'Bebas Neue', cursive;
   font-size: 35px;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   font-weight: 500;
-  cursor: none; 
 
+
+  padding: 12px;
+  width: 210px;
+  background-color: #e4d9c7;
+  cursor: none; 
+  z-index: 10000;
+  position: absolute;
+  margin-left: 1275px;
+  margin-top: 250px;
+}
+
+.projects-links {
+  width: 210px;
+  height: 200px;
   z-index: 1000;
   position: absolute;
   margin-left: 1275px;
   margin-top: 300px;
-}
 
-.projects-links {
-  z-index: 1000;
-  position: absolute;
-  margin-left: 1300px;
-  margin-top: 300px;
-  padding-top: 2rem;
-
-  
+  height: 200px;
+  box-shadow: 12px 20px 20px #222222;
+  padding: 11px;
+  background-color: #e4d9c7;
 }
 
 .projects-links > ol {
-  padding-top: 10px;
+
+
   margin-top: 15px;
   font-family: 'PT Serif', serif;
   font-size: 20px;
