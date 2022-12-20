@@ -14,8 +14,8 @@ export default function Header () {
   const getGridSize = () => {
 
     // Calc the amount of rows and columns
-    const columns = Math.floor(document.documentElement.clientWidth / 50)
-    const rows = Math.floor(document.documentElement.clientHeight / 50)
+    const columns = Math.floor(document.documentElement.clientWidth / 25)
+    const rows = Math.floor(document.documentElement.clientHeight / 25)
 
     console.log(columns, rows)
 
@@ -43,8 +43,8 @@ export default function Header () {
 }
 
   useEffect(() => {
-    const columns = Math.floor(document.documentElement.clientWidth / 50)
-    const rows = Math.floor(document.documentElement.clientHeight / 50)
+    const columns = Math.floor(document.documentElement.clientWidth / 25)
+    const rows = Math.floor(document.documentElement.clientHeight / 25)
 
   setState(prevState => ({
     ...prevState,
@@ -90,16 +90,19 @@ export default function Header () {
 
 
   return (
-    <div id='tiles'>
-          {([...Array(state.total)]).map((tile, i) => (
-      <div
-        className="tile"
-        key={i}
-        id={i}
-        onClick={(i) => handleStagger(i)}
+    <div>
 
-      />
-          ))}
+      <div id='tiles'>
+            {([...Array(state.total)]).map((tile, i) => (
+        <div
+          className="tile"
+          key={i}
+          id={i}
+          onClick={(i) => handleStagger(i)}
+
+        />
+            ))}
+      </div>
     </div>
   )
 }
