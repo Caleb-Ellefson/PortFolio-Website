@@ -4,13 +4,14 @@ import React from "react";
 import { Container } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin, } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 export default function Nav () {
     return ( 
         <div>
             <Container>
-                <div>
+                <div className="socials">
                     <a href="https://github.com/Caleb-Ellefson">
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
@@ -18,7 +19,7 @@ export default function Nav () {
                         <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                     <a href="https://github.com/Caleb-Ellefson">
-                        <FontAwesomeIcon icon={faGithub } />
+                        <FontAwesomeIcon icon={faEnvelope } />
                     </a>
                 </div>
             </Container>

@@ -12,21 +12,22 @@ export default function Text () {
                 </p>
             </div>
 
-            <h4 className="projects"> Projects </h4>
-            <ul className="projects-links">
-                <ol>
-                    <a className='link' href="https://github.com/code50/69178718/tree/main/finance"> Stock Trader </a>
-                </ol>
-                <ol>
-                    <a href="https://github.com/Caleb-Ellefson/MemeGenerator"> MemeGenerator </a>
-                </ol>
-                <ol>
-                    <a href="https://github.com/Caleb-Ellefson/Sorting-Visualizer"> Sorting Visualizer </a>
-                </ol>
-                <ol>
-                    <a href="https://github.com/Caleb-Ellefson/PortFolio-Website"> This Website </a>
-                </ol>
-            </ul>
+                <h4 className="projects"> Projects </h4>
+                <ul className="projects-links">
+                    <ol>
+                        <a className='link' href="https://github.com/code50/69178718/tree/main/finance"> Stock Trader </a>
+                    </ol>
+                    <ol>
+                        <a href="https://github.com/Caleb-Ellefson/MemeGenerator"> MemeGenerator </a>
+                    </ol>
+                    <ol>
+                        <a href="https://github.com/Caleb-Ellefson/Sorting-Visualizer"> Sorting Visualizer </a>
+                    </ol>
+                    <ol>
+                        <a href="https://github.com/Caleb-Ellefson/PortFolio-Website"> This Website </a>
+                    </ol>
+                </ul>
+
         </div>
     )
 }
